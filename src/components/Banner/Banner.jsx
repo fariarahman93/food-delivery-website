@@ -12,7 +12,7 @@ const Banner = () => {
     {/* <div  className="lg:w-1/2 sm: bg-orange-300 rounded-3xl  "  >
     <img src={image1} className="rounded-lg " />
   </div> */}
-  <div className="relative lg:w-1/2 sm:w-full bg-orange-300 rounded-3xl overflow-hidden shadow-lg ">
+  <div className="relative lg:w-1/2  bg-orange-400 sm:w-full rounded-3xl overflow-hidden  ">
     <img src={image1} className=" w-full h-auto rounded-lg " alt="" />
 </div>
 
