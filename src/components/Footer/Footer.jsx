@@ -25,7 +25,7 @@ const Footer = () => {
                         <p className='font-semibold pb-9'>Copyright©Tripp.All right reserved</p>
                     </div>
                     <nav className="flex pt-6">
-                        <div className="circle bg-orange-200 p-2 text-orange-500 rounded-full">
+                        <div className="circle rounded-full  md: bg-orange-200 p-2 text-orange-500  ">
                             <FontAwesomeIcon icon={faGoogle} />
                         </div>
                         <div className="circle bg-orange-200 p-2 text-orange-500 rounded-full">

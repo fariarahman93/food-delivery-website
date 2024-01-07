@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Item from "../Item/Item";
 import '../../App.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
-
 // Modal component
 const Modal = ({ onClose, children }) => {
     return (
@@ -25,6 +24,8 @@ const Popular = () => {
     const [showModal, setShowModal] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 767px)").matches);
+
+    
 
     useEffect(() => {
         const handleResize = () => {
@@ -52,6 +53,7 @@ const Popular = () => {
                 }
             });
     }, []);
+    
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
     };
@@ -90,12 +92,11 @@ const Popular = () => {
                 </h2>
             </div>
 
-            <div className={`grid grid-cols-${isMobile ? '3' : '5'} gap-4 overflow-hidden`}>
+            <div className={`grid grid-cols-3 md:grid-cols-5  gap-4 overflow-hidden`}>
                 {popularData.slice(currentIndex, currentIndex + (isMobile ? 3 : 5)).map((item) => (
                     <Item key={item.Id} item={item} />
                 ))}
             </div>
-
 
             {/* Modal */}
             {showModal && (

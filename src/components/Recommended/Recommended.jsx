@@ -90,7 +90,7 @@ const Recommended = () => {
                 </h2>
             </div>
 
-            <div className={`grid grid-cols-${isMobile ? '3' : '5'} gap-4 overflow-hidden`}>
+            <div className={`grid grid-cols-3 md:grid-cols-5 gap-4 overflow-hidden`}>
                 {recommendedData.slice(currentIndex, currentIndex + (isMobile ? 3 : 5)).map((item) => (
                     <Item key={item.Id} item={item} />
                 ))}
